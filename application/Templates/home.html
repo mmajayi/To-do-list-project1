@@ -1,0 +1,13 @@
+<h1> Rental Cars</h1>
+{% extends 'layout.html %'}
+
+{% block body %}
+    
+    <br>
+    {% for task in tasks %}
+            {{ += f"{task.id:0>3} | {task.description} | {task.completed}\<br>"}}
+            <a href="{{ url_for('update', id=task.id) }}">Update</a>
+            <a href="{{ url_for('delete', id=task.id) }}">Delete</a>
+            <br>
+    { % endfor %}
+{% endblock body %}
