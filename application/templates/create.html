@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body %}
+<head>
+    <title>Rent a Car</title>
+</head>
+<body>
+    <h1>Please add the vehicle of your preference</h1>
+    <div class='select_vehicle'>
+        <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+            {{ form.car_Make.label }} {{ form.car_Make }}
+            <br>
+            {{ form.car_Model.label }} {{ form.car_Model }}
+            <br>
+            {{ form.car_year.label }} {{ form.car_year }}
+            <br>
+            {{ form.car_description.label }} {{ form.car_description }}
+            <br>
+            {{ form.order_car.label }} {{ form.order_car }}
+            <br>
+            {{ form.submit }}
+            
+        </form>
+    </div>
+</body>
+{% endblock %}

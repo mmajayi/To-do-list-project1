@@ -1,0 +1,19 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<body>
+<head>
+<title>Mike's Car Rentals</title> 
+</head>    
+<br>
+    {% for car in car %}
+        {{ car.id }} {{ car.car_Make }} {{ car.car_Model }} {{ car.car_year }} {{ car.car_description }}
+        <a href='{{ url_for("update", id=car.id) }}'>Edit car</a> 
+        <a href='{{ url_for("delete", id=car.id) }}'>Delete car</a> 
+    <br> 
+</body>
+{% endfor %}
+
+{% endblock body %}
