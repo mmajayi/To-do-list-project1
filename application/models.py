@@ -1,18 +1,3 @@
-# from . import db
-
-# class Task(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     description = db.Column(db.String(100), nullable=False)
-#     completed = db.Column(db.Boolean, nullable=False, default=False)
-
-
-
-# class Person(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     first_name = db.Column(db.String(30), nullable=False)
-#     last_name = db.Column(db.String(30), nullable=False)
-
-
 from application import db
 
 class Client(db.Model):

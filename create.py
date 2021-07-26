@@ -1,29 +1,9 @@
-# from application import db 
-# from application.models import Task 
-
-# db.drop_all() 
-# db.create_all() 
- 
-# first_task = Task(description="Idk, some task!") 
-# second_task = Task(description="Idk, some other task!", completed=True)  
-
-# db.session.add(first_task) 
-# db.session.add(second_task) 
-# db.session.commit() 
-
 from application import db
 from application.models import Car, Client, Orders
 
 
 db.drop_all() 
 db.create_all()
-
-# class car(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     Car_make = db.Column(db.String(45), nullable=False)
-#     Car_model = db.Column(db.String(35), nullable=False)
-#     Car_year = db.Column(db.Integer, nullable=False)
-#     Car_description = db.Column(db.String(100), nullable=False)
 
 first_client = Client(first_name="Paul", last_name="Davies", address="123 John Doe Street", email_address="pdavies@outlook.com")
 second_client = Client(first_name="Sam", last_name="Foden", address="3 Chelsea Avenue", email_address="samfoden@outlook.com")
@@ -71,23 +51,3 @@ db.session.add(fifth_car)
 db.session.add(sixth_car)
 db.session.add(seventh_car)
 db.session.commit()
-
-
-
-# class Clients
-#     id = db.Column(db.Integer, primary_key=True)
-#     fk_order_id = db.Column(db.Integer, nullable=False)
-#     first_name = db.Column(db.String(30), nullable=False)
-#     last_name = db.Column(db.String(30), nullable=False)
-#     address = db.Column(db.Integer, db.String(45), nullable=False)
-#     email_address = db.Column()
-
-
-
-# class Orders(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     fk_client_id = db.Column(db.Integer, nullable=True)
-#     fk_car_id = db.Column(db.Integer, nullable=True)
-#     quantity_purchased = db.Column(db.Integer, nullable=True)
-#     order_date= db.Column(db.DateTime)
-    
